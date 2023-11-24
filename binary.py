@@ -28,5 +28,7 @@ def binarySearch(f, a, b, limit=2.23, max=50):
 
 #メイン実行部
 if (__name__ == '__main__'):
+    a = int(input("a"))
+    b = int(input("b"))
 
-    solution = binarySearch(f, 2.0, 3)
+    solution = binarySearch(f, a, b)

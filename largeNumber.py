@@ -1,4 +1,5 @@
 # ２番目の固有値
+import ast
 import numpy as np
 
 def eigen(A):
@@ -13,9 +14,12 @@ def eigenValue(result):
         eigenvalues, eigenvectors = np.linalg.eig(result)
         return max(eigenvalues)
 
-A = np.array([[3, 1], [1, 3]]) 
+# 二次元配列で入力
+print("対象となる行列を入力:")
+matrix_A_input = input() 
+matrix_A = np.array(ast.literal_eval(matrix_A_input))
    
-result = eigen(A)
+result = eigen(matrix_A)
 print("Aダッシュは\n{}".format(result))
 result2 = eigenValue(result)
 print("2番目の固有値は{}".format(result2))

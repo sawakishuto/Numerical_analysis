@@ -1,4 +1,5 @@
 # 固有値と固有ベクトル
+import ast
 import numpy as np
 
 def eigen(A):
@@ -13,6 +14,8 @@ def eigen(A):
     
     print("固有ベクトル:")
     print(eigenvectors)
-
-A = np.array([[3, 1,0], [1, 3,0], [1,2,0]]) 
-eigen(A)
+# 二次元配列で入力
+print("対象となる行列を入力:")
+matrix_A_input = input() 
+matrix_A = np.array(ast.literal_eval(matrix_A_input))
+eigen(matrix_A)

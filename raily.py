@@ -1,5 +1,6 @@
 # レイリー商
 # 最大固有値を求めたい
+import ast
 import numpy as np
 def reily(A, x, limit = 3.88):
         x_d = A @ x
@@ -15,6 +16,14 @@ def reily(A, x, limit = 3.88):
             reily(A, x_d)
         else:
               print("結果は{}です。".format(r))
-A = np.array([[3,1],[1,3]])
-x = np.array([1,0])
+# 二次元配列で入力
+# 対象の行列
+print("対象となる行列を入力:")
+matrix_A_input = input() 
+A = np.array(ast.literal_eval(matrix_A_input))
+# 1次元配列で入力
+# 初期
+print("初期:")
+matrix_A_input = input() 
+x = np.array(ast.literal_eval(matrix_A_input))
 reily(A, x)

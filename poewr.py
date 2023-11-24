@@ -1,4 +1,5 @@
 # 冪乗で固有値計算
+import ast
 import numpy as np
 
 def power(matrix, v, limit=0.001, max_iter=100):
@@ -15,7 +16,13 @@ def power(matrix, v, limit=0.001, max_iter=100):
             return r, v   
     return None
 # 対象の行列
-matrix_A = np.array([[4, 1], [1, 0]])
-# 初期値
-initialmat = np.array([[1], [0]])
+# 二次元配列で入力
+print("対象となる行列を入力:")
+matrix_A_input = input() 
+matrix_A = np.array(ast.literal_eval(matrix_A_input))
+
+# 初期値  
+print("v_0を入力:")
+initialmat_input = input()
+initialmat = np.array(ast.literal_eval(initialmat_input))
 power(matrix_A, initialmat)
