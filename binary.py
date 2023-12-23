@@ -1,9 +1,11 @@
+# 澤木柊斗
+# 26002201720
 # 二分法
 import numpy as np   
 
 
 def f(x):
-    return x**2 -5.0
+    return x**2 - 10 * np.sin(x) -2
 
 def binarySearch(f, a, b, limit=2.23, max=50):
     num = 0
