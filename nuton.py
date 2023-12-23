@@ -1,13 +1,13 @@
 import numpy as np
 
 def f(x):
-  return np.sin(x) - x**2
+  return x**2 - 10 * np.sin(x) -2
 
 def df(x):
-  return np.cos(x) - 2*x
+  return 2 * x - 10*np.cos(x) 
 
-x=0.5
-accuracy=0.01
+x=0.7
+accuracy=0.001
 n=1
 # while文でf(x)=0まで繰り返す
 while True:
